@@ -9,4 +9,4 @@ if __name__ == "__main__":
 	else:
 		print(size, "arguments:")
 	for i in range(1, size + 1):
-		print(i, ": ",sys.argv[i], sep="")
+		print(i, ": ", sys.argv[i], sep="")
