@@ -2,7 +2,6 @@
 def safe_print_integer(value):
     try:
         print("{:d}".format(value))
-        n = True
+        return True
     except ValueError:
-        n = False
-    return n
+        return False
