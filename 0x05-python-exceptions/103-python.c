@@ -1,4 +1,6 @@
 #include <Python.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * print_python_list -  function prints information about a Python list.
  * @p: a pointer to apython object
