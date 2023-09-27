@@ -4,17 +4,20 @@
 
 
 class Square:
+    """square class with a private attribute size"""
     def __init__(self, size=0):
         self.size = size
 
     @property
     def size(self):
+        """retrieve the attribute"""
         return self.__size
 
     @size.setter
     def size(self, value):
+
         """Check if value is an integer"""
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("size must be an integer")
 
         """Check if value is greater than or equal to 0"""
@@ -26,11 +29,13 @@ class Square:
 
     def area(self):
         """Return the area of the square"""
-        return self.__size ** 2
+        return self.__size * self.__size
 
     def my_print(self):
         """print the square to stdout with xcter ###"""
-        for i in range(self.__size):
-            print("#", end="")
         if self.__size == 0:
             print("")
+        for i in range(self.__size):
+            for j in range(self.__size):
+                print("#", end="")
+            print()
