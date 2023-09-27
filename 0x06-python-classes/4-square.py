@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""a class Square with private instance attribute: size"""
+"""a class Square with private instance attribute:size"""
 
 
 class Square:
