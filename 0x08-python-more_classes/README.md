@@ -28,3 +28,4 @@
 - What is and what does contain __dict__ of a class and of an instance of a class
 - How does Python find the attributes of an object or class
 - How to use the getattr function
+
