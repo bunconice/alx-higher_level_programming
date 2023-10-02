@@ -5,11 +5,17 @@
 class Rectangle:
     """Rectangle class with private instance attributes"""
     def __init__(self, width=0, height=0):
+        """initializing the Rectangle class
+        Args:
+            width: represenst width of the rectangle
+            height: represents the height of the rectangle
+        """
         self.width = width
         self.height = height
 
     @property
     def width(self):
+        """gets the value of width"""
         return self.__width
 
     @width.setter
@@ -25,6 +31,7 @@ class Rectangle:
 
     @property
     def height(self):
+        """gets the value of height"""
         return self.__height
 
     @height.setter
@@ -35,5 +42,5 @@ class Rectangle:
         """checks if value is less than zero"""
         if value < 0:
             raise ValueError("height must be >= than 0")
-        """assign value to private attribut height"""
+        """assign value to private attribute height"""
         self.__height = value
