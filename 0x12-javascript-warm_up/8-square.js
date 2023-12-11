@@ -5,7 +5,7 @@ if (Number.isInteger(+arg)) {
   for (let index = 0; index < (+arg); index++) {
     let p = '';
     for (let a = 0; a < (+arg); a++) {
-      p += 'x';
+      p += 'X';
     }
     console.log(p);
   }
