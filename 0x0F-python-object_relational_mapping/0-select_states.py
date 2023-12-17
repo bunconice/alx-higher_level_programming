@@ -14,7 +14,7 @@ if __name__ == "__main__":
     cur = my_db.cursor()
 
     # executing mysql queries
-    cur.execute("SELECT * FROM state ORDER BY state.id ASC")
+    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
 
     # obtaining query result
     my_data = cur.fetall()
