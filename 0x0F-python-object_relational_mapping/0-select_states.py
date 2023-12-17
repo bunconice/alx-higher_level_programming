@@ -1,30 +1,25 @@
 #!/usr/bin/python3
 """
-Module that connects a python script to a database hbtn_0e_0_usa:
+return all table values (table 'states')
+parameters given to script: username, password, database
 """
+
 import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    # connect to the database using arguments from the cli
-    my_db = MySQLdb.connect(
-        host="localhost", user=argv[1], passwd=argv[2], db=argv[3], port=3306)
 
-    # create cursor object
-    cur = my_db.cursor()
+    # connect to database
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=argv[1],
+                         passwd=argv[2],
+                         db=argv[3])
 
-    # executing mysql queries
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
-
-    # obtaining query result
-    my_data = cur.fetall()
-
-    # iterate through the data and print
-    for row in my_data:
+    # create cursor to exec queries using SQL
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM states ORDER BY id ASC")
+    for row in cursor.fetchall():
         print(row)
-
-    # Close all cursors
-    cur.close()
-
-    # Close all databases
-    my_db.close()
+    cursor.close()
+    db.close()
